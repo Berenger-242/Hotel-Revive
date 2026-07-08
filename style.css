@@ -1,0 +1,150 @@
+*{ 
+    margin:0; padding:0; 
+    box-sizing:border-box; 
+}
+
+body{
+    background: #FFFFFF;
+    color: #2A2621;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* ==================  COLORATION DE TOUS LES LIENS =====================*/
+
+a{
+    color: inherit; 
+    text-decoration: none;
+}
+
+  /* ======================== GESTION DU NAVBAR ========================== */
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 1.5rem 2.5rem;
+    border-bottom: 1px solid #DAD5C8;
+    position: sticky;
+    top: 0;
+    background: #F6F4EF;
+    z-index: 10;
+}
+
+.identite{
+    color: #C5A880;
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.identite span{
+    color: #6B8F71; 
+}
+
+.nav-liens{
+    display:flex;
+    gap: 2.5rem;
+    list-style:none;
+}
+
+.nav-liens a{
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* ================= GESTION DU FOOTER ========================= */
+
+footer{
+    border-top: 1px solid #DAD5C8;
+    padding: 4rem 2.5rem 2rem;
+    margin-top: 6rem;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-identite .identite{
+    display:block; 
+    margin-bottom: 1rem;
+}
+
+.footer-identite p{
+    font-size: 0.85rem;
+    color: #55625B;
+    line-height: 1.6;
+    max-width: 26ch;
+}
+
+.footer-column h4{
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6B8F71;
+    margin-bottom: 1.1rem;
+}
+
+.footer-column ul{ 
+    list-style:none; 
+}
+
+.footer-column li{ 
+    margin-bottom: 0.7rem; 
+}
+
+.footer-column a, .footer-column p{
+    font-size: 0.9rem;
+    color: #1F2A24;
+}
+
+.footer-form{
+    display:flex;
+    border-bottom: 1px solid #1F2A24;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.footer-form input{
+    flex:1;
+    border:none;
+    background:none;
+    font-family:'Helvetica Neue', sans-serif;
+    font-size: 0.9rem;
+    outline:none;   
+}
+
+.footer-form button{
+    background:none;
+    border:none;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #6B8F71;
+    cursor:pointer;
+}
+
+.footer-bottom{
+    max-width: 1200px;
+    margin: 3.5rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #DAD5C8;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size: 0.75rem;
+    color: #8A8577;
+    letter-spacing: 0.03em;
+}
+
+/*============ MEDIA QUERIES. ======================*/
+
+
+
