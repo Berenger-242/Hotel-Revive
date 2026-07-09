@@ -1,0 +1,116 @@
+:root {
+  --blanc-lin: #FFFFFF;
+  --creme-lait: #FBF9F6;
+  --sable-fin: #E8DFD3;
+  --terre-sable: #C5A880;
+  --brun-ecorce: #2A2621;
+
+  --section-padding-top: 120px;
+  --section-padding-bottom: 120px;
+  --section-padding-min: 80px;
+
+  --transition-hover: 0.4s;
+  --shadow-hover: 0 10px 30px rgba(42, 38, 33, 0.04);
+
+  --font-serif: "Georgia", "Playfair Display", serif;
+  --font-sans: "Helvetica Neue", "Inter", "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+  background-color: var(--creme-lait);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+header p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* CARTES PROJETS */
+.conteneur_cartes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.carte {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: var(--creme-lait);
+  padding: 20px;
+  height: 300px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-scale);
+}
+
+.carte:hover {
+  transform: scale(1.05);
+}
+
+.carte h3 {
+  font-family: var(--font-serif);
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: var(--terre-sable);
+  color: var(--blanc-lin);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: var(--transition-scale);
+}
+
+button:hover {
+  background-color: var(--brun-ecorce);
+  transform: scale(1.05);
+}
+
+/* COMMENTAIRES CLIENTS */
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+}
+.aside{
+    display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.retour_client {
+  display: flex;
+  flex-wrap:wrap;
+  gap:20px;
+  background-color: var(--creme-lait);
+  border: 1px solid var(--sable-fin);
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-card);
+  max-width: 200px;
+}
