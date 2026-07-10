@@ -25,7 +25,7 @@ Grasty G SAMBA DINAULT
 Tony Berenger KEDO
 AKIANA Arsène 
 KALLA Claireline
-Valor Jeannelle
+OWALA Brichelvie Jeannelle
 
 ## Workflow Git
 
