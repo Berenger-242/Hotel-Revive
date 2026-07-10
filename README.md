@@ -21,11 +21,11 @@ Hotel Revive est un Portfolio d'agence créative moderne réalisée dans le cadr
 - Responsive Design
 
 ## Membres
-Grasty G SAMBA DINAULT
-Tony Berenger KEDO
-AKIANA Arsène 
-KALLA Claireline
-OWALA Brichelvie Jeannelle
+| Grasty G SAMBA DINAULT |
+|Tony Berenger KEDO |
+|AKIANA Arsène|
+| KALLA Claireline |
+| OWALA Brichelvie Jeannelle |
 
 ## Workflow Git
 
