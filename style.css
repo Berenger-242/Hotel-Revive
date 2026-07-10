@@ -16,7 +16,7 @@ a{
     text-decoration: none;
 }
 
-  /* ======================== GESTION DU NAVBAR ========================== */
+/* ======================== GESTION DU NAVBAR ========================== */
 
 .navbar{
     display:flex;
@@ -229,6 +229,7 @@ aside {
   justify-content: space-between;
   gap: 20px;
 }
+
 .retour_client {
   display: flex;
   flex-wrap:wrap;
@@ -240,6 +241,400 @@ aside {
   font-size: 0.9rem;
   box-shadow: var(--shadow-card);
   max-width: 200px;
+}
+
+/*. =================. Css de la page d'accueil ==================*/
+
+*{
+    margin:0; padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: #FFFFFF;
+    color: #2A2621;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ======================== NAVBAR ========================== */
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 1.5rem 2.5rem;
+    border-bottom: 1px solid #DAD5C8;
+    position: sticky;
+    top: 0;
+    background: #F6F4EF;
+    z-index: 10;
+}
+
+.identite{
+    color: #C5A880;
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.identite span{
+    color: #6B8F71;
+}
+
+.nav-liens{
+    display:flex;
+    gap: 2.5rem;
+    list-style:none;
+}
+
+.nav-liens a{
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-liens a::after{
+    content:"";
+    position:absolute;
+    left:0; bottom:0;
+    width:0%;
+    height:1px;
+    background:#6B8F71;
+    transition: width 0.3s ease;
+}
+
+.nav-liens a:hover::after{
+    width:100%;
+}
+
+.nav-cta{
+    border: 1px solid #2A2621;
+    padding: 0.55rem 1.3rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.nav-cta:hover{
+    background: #2A2621;
+    color: #F6F4EF;
+}
+
+/* ======================== HERO ========================== */
+
+.hero{
+    position: relative;
+    height: 88vh;
+    min-height: 560px;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+}
+
+.hero img{
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    object-fit: cover;
+    filter: grayscale(15%);
+}
+
+.hero-contenu{
+    position: relative;
+    z-index: 2;
+    padding: 0 2.5rem 4.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    color: #F6F4EF;
+}
+
+.hero-eyebrow{
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #C5A880;
+    margin-bottom: 1.4rem;
+    display:block;
+}
+
+.hero-contenu h1{
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 1.08;
+    max-width: 15ch;
+}
+
+.hero-contenu h1 em{
+    font-style: italic;
+    color: #C5A880;
+}
+
+.hero-sous{
+    margin-top: 1.6rem;
+    font-size: 1.02rem;
+    max-width: 42ch;
+    color: #DAD5C8;
+    line-height: 1.6;
+}
+
+.hero-actions{
+    margin-top: 2.3rem;
+    display:flex;
+    gap: 1.2rem;
+    align-items:center;
+}
+
+.btn-primaire{
+    background: #C5A880;
+    color: #1F2A24;
+    padding: 0.85rem 1.8rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.25s ease;
+}
+
+.btn-primaire:hover{
+    background: #DAD5C8;
+}
+
+.btn-secondaire{
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(246,244,239,0.5);
+    padding-bottom: 3px;
+}
+
+/* ======================== SECTIONS COMMUNES ========================== */
+
+section{
+    padding: 6.5rem 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-eyebrow{
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #6B8F71;
+    margin-bottom: 1rem;
+    display:block;
+}
+
+.section-titre{
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    max-width: 22ch;
+    line-height: 1.2;
+}
+
+/* ======================== APPROCHE (processus) ========================== */
+
+.approche-intro{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.approche-intro p{
+    max-width: 34ch;
+    font-size: 0.95rem;
+    color: #55625B;
+    line-height: 1.7;
+}
+
+.etapes{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid #DAD5C8;
+}
+
+.etape{
+    padding: 2.6rem 2rem 2.6rem 0;
+    border-right: 1px solid #DAD5C8;
+}
+
+.etape:last-child{
+    border-right:none;
+}
+
+.etape-num{
+    font-family:'Georgia', serif;
+    font-size: 0.85rem;
+    color: #C5A880;
+    letter-spacing: 0.05em;
+}
+
+.etape h3{
+    font-family:'Georgia', serif;
+    font-weight: 400;
+    font-size: 1.35rem;
+    margin: 1.1rem 0 0.9rem;
+}
+
+.etape p{
+    font-size: 0.9rem;
+    color: #55625B;
+    line-height: 1.65;
+    max-width: 30ch;
+}
+
+/* ======================== AVANT / APRÈS ========================== */
+
+.avant-apres{
+    background: #F6F4EF;
+}
+
+.aa-tete{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3.2rem;
+}
+
+.aa-grille{
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 1.5rem;
+    align-items:stretch;
+}
+
+.aa-image{
+    position:relative;
+    overflow:hidden;
+    min-height: 420px;
+}
+
+.aa-image img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    filter: grayscale(10%);
+}
+
+.aa-tag{
+    position:absolute;
+    top: 1.3rem; left: 1.3rem;
+    background: rgba(246,244,239,0.92);
+    color:#1F2A24;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+}
+
+.aa-detail{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding: 2.4rem;
+    border: 1px solid #DAD5C8;
+    background:#FFFFFF;
+}
+
+.aa-detail h3{
+    font-family:'Georgia', serif;
+    font-weight:400;
+    font-size:1.5rem;
+    line-height:1.3;
+}
+
+.aa-detail p{
+    font-size: 0.92rem;
+    color:#55625B;
+    line-height:1.7;
+    margin-top:1.2rem;
+}
+
+.aa-stats{
+    display:flex;
+    gap: 2.2rem;
+    margin-top: 2.4rem;
+    border-top: 1px solid #DAD5C8;
+    padding-top: 1.6rem;
+}
+
+.aa-stats div span{
+    display:block;
+    font-family:'Georgia', serif;
+    font-size: 1.6rem;
+    color:#6B8F71;
+}
+
+.aa-stats div small{
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color:#8A8577;
+}
+
+/* ======================== CITATION ========================== */
+
+.citation{
+    text-align:center;
+    max-width: 780px;
+}
+
+.citation blockquote{
+    font-family:'Georgia', serif;
+    font-style: italic;
+    font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+    line-height: 1.5;
+    color:#2A2621;
+}
+
+.citation cite{
+    display:block;
+    margin-top: 1.6rem;
+    font-style: normal;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color:#8A8577;
+}
+
+/* ======================== RESPONSIVE ========================== */
+
+@media (max-width: 900px){
+    .nav-liens{ display:none; }
+    .etapes{ grid-template-columns: 1fr; }
+    .etape{ border-right:none; border-bottom:1px solid #DAD5C8; }
+    .etape:last-child{ border-bottom:none; }
+    .aa-grille{ grid-template-columns: 1fr; }
+    .aa-image{ min-height: 300px; }
+    .footer-grid{ grid-template-columns: 1fr 1fr; }
+    .footer-identite{ grid-column: 1 / -1; }
+    .cta-inner{ text-align:center; justify-content:center; }
+}
+
+@media (max-width: 560px){
+    .footer-grid{ grid-template-columns: 1fr; }
+    section{ padding: 4.5rem 1.5rem; }
+    .navbar{ padding: 1.2rem 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; }
 }
 
 /*============ MEDIA QUERIES. ======================*/
