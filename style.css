@@ -144,6 +144,104 @@ footer{
     letter-spacing: 0.03em;
 }
 
+/*======================. CSS DU FICHIER REALISATION. =========================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+._header-real {
+  background-color: #F6F4EF;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+._header-real h1 {
+    margin-top: 0.3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+._header-real p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* CARTES PROJETS */
+.conteneur_cartes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.carte {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-color: #FBF9F6;
+    padding: 20px;
+    height: 300px;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-scale);
+}
+
+.carte h3 {
+    font-family: "Georgia", "Playfair Display", serif;
+    margin-bottom: 10px;
+}
+
+button {
+  background-color: #C5A880;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Inter", "Montserrat", sans-serif;;
+}
+
+button:hover {
+  background-color: #2A2621;
+}
+
+/* COMMENTAIRES CLIENTS */
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+}
+.aside{
+    display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.retour_client {
+  display: flex;
+  flex-wrap:wrap;
+  gap:20px;
+  background-color: #FBF9F6;
+  border: 1px solid #E8DFD3;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-card);
+  max-width: 200px;
+}
+
 /*============ MEDIA QUERIES. ======================*/
 
 
