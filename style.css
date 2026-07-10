@@ -823,9 +823,17 @@ display: block;
     }
 }
  
-  
-
-
+@media only screen and (min-width: 480px), (orientation: portrait) {
+  .page-title{
+      width:270px;}
+}
+@media only screen and (min-width: 768px) and (max-width:1024px) and (orientation:landscape) {
+.page-tetle, .descrip{
+    float:left;
+    width:20rem;}
+    .descrip{
+        text-align: left;}
+}
 
 /* ================= GESTION DU FOOTER ========================= */
 
