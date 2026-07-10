@@ -817,7 +817,12 @@ display: block;
     font-weight: 700;
     text-align: center;
 }
-
+@media only screen and (min-width: 320px) and (max-width:480px) {
+    .design .dil{
+        width: 95%;
+    }
+}
+ 
   
 
 
