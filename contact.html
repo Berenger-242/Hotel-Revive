@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Hôtel Revive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="identite">Hôtel Revive</a>
+
+    <ul class="nav-liens">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="realisation.html">Réalisations</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <!-- aria-current="page" dit aux lecteurs d'écran ET à Google
+             "c'est la page où on se trouve actuellement". Bonne pratique
+             d'accessibilité trop souvent oubliée. -->
+    </ul>
+</nav>
+
+<main>
+
+    <header class="_header-real">
+        <h1>Contactez-nous</h1>
+        <p>
+            Une question, un projet de rénovation, une envie de collaborer ?
+            Notre équipe vous répond sous 48h ouvrées.
+        </p>
+    </header>
+
+    <section class="contact-section">
+
+        <!--  LE FORMULAIRE  -->
+
+        <form class="contact-form" action="#" method="post" novalidate>
+            <!-- action="#" : normalement l'URL du serveur qui traite le formulaire.
+                 method="post" : les données du formulaire ne doivent Jamais
+                 partir en GET (elles apparaîtraient dans l'URL, donc dans
+                 l'historique du navigateur donc mauvais pour la sécurité/vie privée).
+                 novalidate : on désactive la validation par défaut du navigateur
+                 -->
+
+            <h2>Écrivez-nous</h2>
+
+            <div class="champ champ-double">
+                <div class="champ">
+                    <label for="prenom">Prénom</label>
+                    <input
+                        type="text"
+                        id="prenom"
+                        name="prenom"
+                        placeholder="Votre prénom"
+                        required
+                        autocomplete="given-name">
+                    <!-- autocomplete="given-name" : le navigateur peut
+                         pré-remplir ce champ automatiquement.-->
+                </div>
+
+                <div class="champ">
+                    <label for="nom">Nom</label>
+                    <input
+                        type="text"
+                        id="nom"
+                        name="nom"
+                        placeholder="Votre nom"
+                        required
+                        autocomplete="family-name">
+                </div>
+            </div>
+
+            <div class="champ">
+                <label for="email">Adresse e-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="akieniacademy@gmail.com"
+                    required
+                    autocomplete="email">
+            </div>
+
+            <div class="champ">
+                <label for="telephone">Téléphone (optionnel)</label>
+                <input
+                    type="tel"
+                    id="telephone"
+                    name="telephone"
+                    placeholder="+242 06 00 00 00 00"
+                    autocomplete="tel">
+                <!-- Pas de "required" ici : on ne rend obligatoire QUE
+                     ce qui est vraiment indispensable. Un formulaire trop
+                     exigeant fait fuir les visiteurs (mauvaise UX/conversion). -->
+            </div>
+
+            <div class="champ">
+                <label for="sujet">Sujet</label>
+                <select id="sujet" name="sujet" required>
+                    <option value="" disabled selected>Choisissez un sujet</option>
+                    <option value="renovation">Projet de rénovation</option>
+                    <option value="design">Design &amp; architecture</option>
+                    <option value="marketing">Marketing &amp; digitalisation</option>
+                    <option value="autre">Autre demande</option>
+                </select>
+            </div>
+
+            <div class="champ">
+                <label for="message">Votre message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Décrivez votre projet ou votre demande..."
+                    required></textarea>
+                    <!-- textarea pour remplir un texte relativement long au lieu d'un simple input-->
+            </div>
+
+            <div class="champ champ-checkbox">
+                <input type="checkbox" id="rgpd" name="rgpd" required>
+                <label for="rgpd">
+                    J'accepte que mes données soient utilisées pour être recontacté(e).
+                </label>
+                <!-- Case à cocher pour le consentement RGPD (protection des
+                     données). Bonne pratique légale/éthique dès qu'un
+                     formulaire collecte des données personnelles. -->
+            </div>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+
+        <!--  LES COORDONNÉES  -->
+        <!-- <aside> = contenu "à côté" du contenu principal, lié mais pas indispensable à la compréhension du formulaire. Ici : coordonnées, horaires, réseaux sociaux. -->
+        <aside class="contact-infos">
+            <h2>Nos coordonnées</h2>
+
+            <!-- <address> est LA balise sémantique pour des coordonnée de contact (adresse postale, téléphone, email). elle aide le SEO local et l'accessibilité. -->
+            <address>
+                <ul class="liste-infos">
+                    <li>
+                        <strong>Adresse</strong>
+                        <span>12 Rue Makoko, Brazzaville</span>
+                    </li>
+                    <li>
+                        <strong>Téléphone</strong>
+                        <a href="tel:+24200000000">+242 00 00 00 00 00</a>
+                    </li>
+                    <li>
+                        <strong>E-mail</strong>
+                        <a href="mailto:accueil@hotelrevive.cg">accueil@hotelrevive.cg</a>
+                    </li>
+                    <li>
+                        <strong>Horaires</strong>
+                        <span>Lun–Ven, 8h–18h</span>
+                    </li>
+                </ul>
+            </address>
+
+            <div class="socials-contact">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </aside>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-identite">
+            <a href="index.html" class="idendite">Hotel Revive</a>
+            <p>Un lieu pensé pour ralentir. Chambres calmes, table locale, et le temps qu'il faut pour se retrouver.</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Nous visiter</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Evênement</a></li>
+                <li><a href="#">Restaurant</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contact</h4>
+            <ul>
+                <li><p>12 Rue Makoko</p></li>
+                <li><p>+242 00 00 00 00 00</p></li>
+                <li><a href="mailto:accueil@hotelrevive.cg">accueil@hotelrevive.cg</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Nous contacter</h4>
+            <p>Nos offres de saison, une fois par mois.</p>
+            <form class="footer-form">
+                <input type="email" placeholder="Votre e-mail">
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 Hôtel Revive — Tous droits réservés</span>
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Pinterest</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
